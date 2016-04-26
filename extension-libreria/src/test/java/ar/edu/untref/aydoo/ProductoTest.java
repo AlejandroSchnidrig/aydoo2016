@@ -9,14 +9,23 @@ public class ProductoTest {
 
 	@Test
 	public void elPrecioDevueltoDeUnProductoNoIncluyeIVA() {
-		
+
 		BigDecimal precioSinIVA = new BigDecimal("100.00");
 		Producto libroElTunel = new Producto("El tunel", precioSinIVA);
-		
+
 		BigDecimal precioSinIVAObtenido = libroElTunel.getPrecio();
-		
+
 		Assert.assertEquals(precioSinIVA, precioSinIVAObtenido);
-		
+
 	}
 
+	@Test
+	public void DescripcionDeUnProductoNoIncluyeIVA() {
+
+		BigDecimal precioSinIVA = new BigDecimal("100.00");
+		Producto libroElTunel = new Producto("El tunel", precioSinIVA);
+
+		Assert.assertEquals("El tunel", libroElTunel.getDescripcion());
+
+	}
 }

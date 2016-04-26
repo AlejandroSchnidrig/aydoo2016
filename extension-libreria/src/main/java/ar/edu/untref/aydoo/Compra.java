@@ -8,14 +8,14 @@ public class Compra {
 	private Mes mes;
 	private Cliente cliente;
 	private List<Producto> productos;
-	
-	public Compra(Mes mes, Cliente cliente){
+
+	public Compra(Mes mes, Cliente cliente) {
 		this.mes = mes;
 		this.setCliente(cliente);
 		this.setProductos(new ArrayList<Producto>());
 	}
-	
-	public void agregarProducto(Producto producto){
+
+	public void agregarProducto(Producto producto) {
 		getProductos().add(producto);
 	}
 
@@ -42,5 +42,5 @@ public class Compra {
 	public void setProductos(List<Producto> productos) {
 		this.productos = productos;
 	}
-	
+
 }
